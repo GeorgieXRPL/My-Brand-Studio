@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Brand Studio (company site)
 
-## Getting Started
+Marketing site for **My Brand Studio** — websites, SEO, social, AI automation, and admin backends for Business and Creator audiences.
 
-First, run the development server:
+The SaaS product **Brand Studio Capture** lives in a separate repo (`Brand building schedule`) and is only linked from this site.
+
+## Dev
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Same-day drafts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Free** if booked before **10:00am NZ**
+- After 10am: next day free, or **$149 NZD** same-day if capacity allows
 
-## Learn More
+## Sketch trial
 
-To learn more about Next.js, take a look at the following resources:
+`POST /api/sketch` generates a one-page HTML preview.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Works without an API key (template fallback)
+- Optional: set `GROQ_API_KEY` or `OPENAI_API_KEY` in `.env.local` for LLM sketches
+- Rate limited (~8 / hour / IP)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
+Connect this folder as its own Vercel project (do not share the Capture app project).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npx vercel
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Branding
+
+| Surface | Name |
+|---------|------|
+| Company + this site | **My Brand Studio** |
+| SaaS app | **Brand Studio Capture** |

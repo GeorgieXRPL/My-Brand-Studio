@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root,
+[data-audience="business"] {
+  --bg: #0c1218;
+  --bg-elevated: #131c26;
+  --fg: #e8eef4;
+  --fg-muted: #9aafc0;
+  --accent: #2dd4bf;
+  --accent-soft: color-mix(in srgb, var(--accent) 18%, transparent);
+  --accent-2: #5eead4;
+  --line: color-mix(in srgb, var(--fg) 12%, transparent);
+  --hero-glow: radial-gradient(
+    120% 80% at 70% 10%,
+    color-mix(in srgb, var(--accent) 22%, transparent),
+    transparent 55%
+  );
+  --mesh: linear-gradient(
+      145deg,
+      color-mix(in srgb, #0c1218 70%, #1a3a3a) 0%,
+      #0c1218 45%,
+      color-mix(in srgb, #0c1218 80%, #1e293b) 100%
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+[data-audience="creator"] {
+  --bg: #120814;
+  --bg-elevated: #1c0f22;
+  --fg: #f6eef8;
+  --fg-muted: #c4a8ce;
+  --accent: #ff6b6b;
+  --accent-soft: color-mix(in srgb, var(--accent) 20%, transparent);
+  --accent-2: #c8f542;
+  --line: color-mix(in srgb, var(--fg) 14%, transparent);
+  --hero-glow: radial-gradient(
+      90% 70% at 20% 20%,
+      color-mix(in srgb, var(--accent) 28%, transparent),
+      transparent 50%
+    ),
+    radial-gradient(
+      70% 60% at 90% 30%,
+      color-mix(in srgb, var(--accent-2) 18%, transparent),
+      transparent 45%
+    );
+  --mesh: linear-gradient(
+      160deg,
+      color-mix(in srgb, #120814 55%, #3b0f2a) 0%,
+      #120814 50%,
+      color-mix(in srgb, #120814 70%, #1a2035) 100%
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-line: var(--line);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+.section-pad {
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+}
+
+.wrap {
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+.reveal {
+  animation: rise 0.7s ease both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 16px transparent;
+  }
+}
+
+.cta-pulse {
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+
+.audience-fade {
+  transition:
+    background-color 0.45s ease,
+    color 0.45s ease,
+    border-color 0.45s ease;
 }
