@@ -14,7 +14,7 @@ export function CaptureStrip() {
           Brand Studio Capture
         </h2>
         <p className="mt-4 max-w-xl text-[var(--fg-muted)] leading-relaxed">
-          Our SaaS product — speak on your phone, get platform-ready drafts, share or post
+          Our SaaS product. Speak on your phone, get platform-ready drafts, share or post
           everywhere. Built by My Brand Studio; separate from custom website work.
         </p>
         <ul className="mt-10 flex flex-wrap gap-8">

@@ -16,7 +16,7 @@ export function StickyBookCta() {
 
   return (
     <a
-      href="#same-day"
+      href="/#same-day"
       className="fixed bottom-4 right-4 z-50 rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[var(--bg)] shadow-lg md:hidden"
     >
       Book free draft

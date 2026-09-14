@@ -69,7 +69,7 @@ export const websitePackages: WebsitePackage[] = [
       "Login-ready shell",
       "Points or simple rewards UI",
       "Schedule / hub patterns",
-      "Playful motion — games/economy scoped separately",
+      "Playful motion. Games and economy scoped separately",
     ],
     highlightFor: ["creator"],
   },
@@ -111,7 +111,7 @@ export const addons: Addon[] = [
     id: "admin-care",
     name: "Admin care",
     priceLabel: "$150 – $400/mo",
-    notes: "Hosting, edits, ops — manage yourself or delegate for a fraction of agency rates",
+    notes: "Hosting, edits, ops. Manage yourself or delegate for a fraction of agency rates",
   },
 ];
 

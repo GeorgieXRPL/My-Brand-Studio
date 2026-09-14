@@ -26,7 +26,7 @@ export function SameDay() {
             Same-day draft
           </p>
           <h2 className="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-            Book before 10am NZ — draft the same day, free.
+            Book before 10am NZ. Draft the same day, free.
           </h2>
           <p className="mt-5 max-w-xl text-[var(--fg-muted)] leading-relaxed">
             A short discovery call about your service, then a one-page concept draft the
@@ -34,10 +34,10 @@ export function SameDay() {
           </p>
           <ul className="mt-6 space-y-2 text-sm text-[var(--fg-muted)]">
             <li>
-              <span className="text-[var(--accent)]">Before 10:00am NZ</span> — free same-day sketch
+              <span className="text-[var(--accent)]">Before 10:00am NZ</span>: free same-day sketch
             </li>
             <li>
-              <span className="text-[var(--fg)]">At / after 10am</span> — next day free, or $
+              <span className="text-[var(--fg)]">At / after 10am</span>: next day free, or $
               {SAME_DAY.paidSameDayNzd} NZD same-day if capacity allows
             </li>
           </ul>
@@ -84,7 +84,7 @@ export function SameDay() {
               className="mt-1.5 w-full rounded-lg border border-[var(--line)] bg-[var(--bg-elevated)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
             />
           </label>
-          <input type="hidden" name="subject" value="Same-day draft booking — My Brand Studio" />
+          <input type="hidden" name="subject" value="Same-day draft booking, My Brand Studio" />
           <button
             type="submit"
             className="w-full rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[var(--bg)]"

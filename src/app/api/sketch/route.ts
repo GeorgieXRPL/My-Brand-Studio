@@ -59,7 +59,7 @@ function templateSketch(prompt: string, audience: string) {
   <main class="hero">
     <span class="chip">${isCreator ? "Creator sketch" : "Business sketch"}</span>
     <h1>${title}</h1>
-    <p>A starting composition from My Brand Studio. Replace this with your real story, offer, and proof — then book a same-day refine before 10am NZ (free).</p>
+    <p>A starting composition from My Brand Studio. Replace this with your real story, offer, and proof, then book a same-day refine before 10am NZ (free).</p>
     <a class="cta" href="#book">Book free same-day draft</a>
     <div class="brief"><strong>Your brief:</strong> ${safe}</div>
   </main>
@@ -124,7 +124,7 @@ export async function POST(req: NextRequest) {
 
   if (!rateLimit(ip)) {
     return NextResponse.json(
-      { error: "Rate limit — try again in an hour, or book a same-day slot." },
+      { error: "Rate limit. Try again in an hour, or book a same-day slot." },
       { status: 429 },
     );
   }

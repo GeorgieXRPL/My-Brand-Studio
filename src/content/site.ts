@@ -7,6 +7,7 @@ export type PortfolioItem = {
   url: string;
   adminUrl?: string;
   tags: Audience[];
+  embedSrc: string;
 };
 
 export const portfolio: PortfolioItem[] = [
@@ -14,35 +15,31 @@ export const portfolio: PortfolioItem[] = [
     id: "ggsaltaire",
     name: "GGSaltaire",
     blurb:
-      "Creator hub with live-editable schedule, socials, and projects — password admin so the owner ships updates without a developer.",
+      "Creator hub with live-editable schedule, socials, and projects. Password admin so the owner ships updates without a developer.",
     url: "https://www.ggsaltaire.com",
-    adminUrl: "https://www.ggsaltaire.com/admin",
+    adminUrl: "/admin/ggsaltaire",
     tags: ["creator", "business"],
+    embedSrc: "https://www.ggsaltaire.com",
   },
   {
     id: "astroid-space",
     name: "Astroid Space",
     blurb:
       "Branded experience site with moderation admin for stars, wishes, and community uploads.",
-    url: "https://astroid.space",
-    adminUrl: "https://astroid.space/admin",
-    tags: ["creator"],
+    url: "https://www.astroid.space",
+    adminUrl: "/admin/astroid-space",
+    tags: ["creator", "business"],
+    embedSrc: "/work-embed/space",
   },
   {
     id: "astroid-club",
-    name: "Astroid Club Admin",
+    name: "Astroid Club",
     blurb:
-      "Live ops console for raids, payouts, gates, and player tooling — product-grade backend control.",
+      "Holder hub with a live ops console for raids, payouts, gates, and player tooling.",
     url: "https://astroid.club",
-    adminUrl: "https://gw.astroid.club/admin",
-    tags: ["business"],
-  },
-  {
-    id: "hypemaker",
-    name: "HypeMaker",
-    blurb: "Sharp conversion landing with clear offer and contact path.",
-    url: "https://hypemaker.io",
-    tags: ["business"],
+    adminUrl: "/admin/astroid-ops",
+    tags: ["business", "creator"],
+    embedSrc: "https://astroid.club",
   },
 ];
 
@@ -58,9 +55,9 @@ export const services: Service[] = [
     id: "websites",
     title: "Website builds & revamps",
     business:
-      "Upgrade tired SMB and startup sites into clear, conversion-ready pages — with optional light admin so you own the edits.",
+      "Upgrade tired SMB and startup sites into clear, conversion-ready pages, with optional light admin so you own the edits.",
     creator:
-      "Colourful, interactive hubs for your following — logins, points, schedules, and community energy that matches your vibe.",
+      "Colourful, interactive hubs for your following: logins, points, schedules, and community energy that matches your vibe.",
   },
   {
     id: "admin",
@@ -68,7 +65,7 @@ export const services: Service[] = [
     business:
       "Own your content and ops console, or delegate care for a fraction of typical agency retainers.",
     creator:
-      "Ship schedule, links, and drops yourself — same admin patterns we built for creator hubs and live communities.",
+      "Ship schedule, links, and drops yourself. Same admin patterns we built for creator hubs and live communities.",
   },
   {
     id: "seo",
@@ -76,13 +73,13 @@ export const services: Service[] = [
     business:
       "Technical foundations and steady keyword work so local and niche buyers can find you.",
     creator:
-      "Make your hub discoverable — titles, structure, and content rhythm that feed the algorithm without sounding corporate.",
+      "Make your hub discoverable. Titles, structure, and content rhythm that feed the algorithm without sounding corporate.",
   },
   {
     id: "social",
     title: "Social & content",
     business:
-      "Consistent presence without hiring a full marketing desk — optional pairing with Brand Studio Capture.",
+      "Consistent presence without hiring a full marketing desk. Optional pairing with Brand Studio Capture.",
     creator:
       "Keep the feed alive in your voice. Pair agency help with Brand Studio Capture when you want draft velocity on your phone.",
   },
@@ -100,13 +97,13 @@ export const copy = {
   business: {
     headline: "Sites and backends that run your business.",
     support:
-      "Revamps, SEO, and ops consoles for SMBs and startups — manage yourself or delegate for less than agency rates.",
+      "Revamps, SEO, and ops consoles for SMBs and startups. Manage yourself or delegate for less than agency rates.",
     secondaryCta: "See admin demos",
   },
   creator: {
     headline: "Hubs your community actually wants to hang in.",
     support:
-      "Interactive sites, logins, points, and playful builds — plus the admin to keep schedule and drops fresh.",
+      "Interactive sites, logins, points, and playful builds, plus the admin to keep schedule and drops fresh.",
     secondaryCta: "See community builds",
   },
 } as const;

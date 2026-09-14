@@ -36,13 +36,13 @@ export function Hero() {
           style={{ animationDelay: "200ms" }}
         >
           <a
-            href="#same-day"
+            href="/#same-day"
             className="cta-pulse rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-[var(--bg)]"
           >
             Free same-day draft before 10am
           </a>
           <a
-            href={audience === "business" ? "#admin" : "#work"}
+            href={audience === "business" ? "/#admin" : "/#work"}
             className="rounded-full border border-[var(--line)] px-6 py-3 text-sm font-medium text-[var(--fg)] hover:border-[var(--accent)] transition-colors"
           >
             {c.secondaryCta}

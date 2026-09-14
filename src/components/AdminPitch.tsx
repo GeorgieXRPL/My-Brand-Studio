@@ -7,57 +7,46 @@ export function AdminPitch() {
             Admin backends
           </p>
           <h2 className="font-display mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-            Manage your own backend — or hand it off for a fraction of market rates.
+            Manage your own backend, or hand it off for a fraction of market rates.
           </h2>
           <p className="mt-5 max-w-xl text-[var(--fg-muted)] leading-relaxed">
             Most businesses pay retainers just to change a schedule or approve a post.
             We build lightweight admin consoles so owners stay in control, with optional
-            care plans when you want us on call.
+            care plans when you want us on call. These live consoles are also{" "}
+            <a href="/templates" className="text-[var(--accent)] hover:underline">
+              template looks
+            </a>
+            .
           </p>
         </div>
         <ul className="space-y-6">
           <li>
-            <a
-              href="https://www.ggsaltaire.com/admin"
-              target="_blank"
-              rel="noreferrer"
-              className="group block"
-            >
+            <a href="/admin/ggsaltaire" className="group block">
               <p className="font-display text-lg font-semibold group-hover:text-[var(--accent)] transition-colors">
                 GGSaltaire Content Editor →
               </p>
               <p className="mt-1 text-sm text-[var(--fg-muted)]">
-                Password admin for tagline, socials, projects, and weekly schedule — live publish.
+                Open the mock. Tagline, socials, projects, and weekly schedule. No password.
               </p>
             </a>
           </li>
           <li>
-            <a
-              href="https://gw.astroid.club/admin"
-              target="_blank"
-              rel="noreferrer"
-              className="group block"
-            >
+            <a href="/admin/astroid-ops" className="group block">
               <p className="font-display text-lg font-semibold group-hover:text-[var(--accent)] transition-colors">
                 Astroid live ops console →
               </p>
               <p className="mt-1 text-sm text-[var(--fg-muted)]">
-                Token-gated ops for raids, payouts, gates, and player tooling.
+                Open the mock. Raids, payouts, gates, and player tooling. No token.
               </p>
             </a>
           </li>
           <li>
-            <a
-              href="https://astroid.space/admin"
-              target="_blank"
-              rel="noreferrer"
-              className="group block"
-            >
+            <a href="/admin/astroid-space" className="group block">
               <p className="font-display text-lg font-semibold group-hover:text-[var(--accent)] transition-colors">
                 Astroid Space moderation →
               </p>
               <p className="mt-1 text-sm text-[var(--fg-muted)]">
-                Approve community content without opening the codebase.
+                Open the mock. Approve stars, wishes, and uploads. No password.
               </p>
             </a>
           </li>

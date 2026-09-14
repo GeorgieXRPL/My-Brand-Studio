@@ -42,7 +42,7 @@ export function SketchTrial() {
           Sketch a homepage in the browser.
         </h2>
         <p className="mt-4 max-w-xl text-[var(--fg-muted)] leading-relaxed">
-          Describe your business or creator vibe. We generate a one-page HTML preview —
+          Describe your business or creator vibe. We generate a one-page HTML preview,
           watermarked. Book a free same-day session before 10am to refine it with My Brand
           Studio.
         </p>

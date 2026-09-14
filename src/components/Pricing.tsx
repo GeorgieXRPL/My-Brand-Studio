@@ -13,7 +13,7 @@ export function Pricing() {
           Pricing
         </p>
         <h2 className="font-display mt-3 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
-          Website packages and care add-ons — NZD.
+          Website packages and care add-ons, NZD.
         </h2>
         <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {websitePackages.map((pkg) => {
