@@ -1,12 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { CONTACT_EMAIL, SAME_DAY } from "@/content/pricing";
 import { getNzParts, isFreeSameDayWindow } from "@/lib/sameDay";
+
+type Status = "idle" | "sending" | "ok" | "invalid" | "rate" | "error";
 
 export function SameDay() {
   const [free, setFree] = useState(true);
   const [clock, setClock] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
 
   useEffect(() => {
     const tick = () => {
@@ -17,6 +20,44 @@ export function SameDay() {
     const id = window.setInterval(tick, 30_000);
     return () => window.clearInterval(id);
   }, []);
+
+  useEffect(() => {
+    const booked = new URLSearchParams(window.location.search).get("booked");
+    if (booked === "1") setStatus("ok");
+    if (booked === "invalid") setStatus("invalid");
+    if (booked === "rate") setStatus("rate");
+    if (booked === "error") setStatus("error");
+  }, []);
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/book", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+      if (res.status === 429) {
+        setStatus("rate");
+        return;
+      }
+      if (res.status === 400) {
+        setStatus("invalid");
+        return;
+      }
+      if (!res.ok) {
+        setStatus("error");
+        return;
+      }
+      form.reset();
+      setStatus("ok");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <section id="same-day" className="section-pad audience-fade">
@@ -52,9 +93,9 @@ export function SameDay() {
         </div>
         <form
           className="space-y-4 border-t border-[var(--line)] pt-8 lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0"
-          action={`mailto:${CONTACT_EMAIL}`}
-          method="get"
-          encType="text/plain"
+          action="/api/book"
+          method="post"
+          onSubmit={onSubmit}
         >
           <p className="font-display text-xl font-semibold">Request a slot</p>
           <label className="block text-sm">
@@ -62,6 +103,9 @@ export function SameDay() {
             <input
               required
               name="name"
+              autoComplete="name"
+              minLength={2}
+              maxLength={80}
               className="mt-1.5 w-full rounded-lg border border-[var(--line)] bg-[var(--bg-elevated)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
             />
           </label>
@@ -71,6 +115,8 @@ export function SameDay() {
               required
               type="email"
               name="email"
+              autoComplete="email"
+              inputMode="email"
               className="mt-1.5 w-full rounded-lg border border-[var(--line)] bg-[var(--bg-elevated)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
             />
           </label>
@@ -80,20 +126,41 @@ export function SameDay() {
               required
               name="body"
               rows={3}
-              placeholder="Business revamp, creator hub, admin console…"
+              minLength={8}
+              maxLength={2000}
+              placeholder="Business revamp, creator hub, admin console"
               className="mt-1.5 w-full rounded-lg border border-[var(--line)] bg-[var(--bg-elevated)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
             />
           </label>
-          <input type="hidden" name="subject" value="Same-day draft booking, My Brand Studio" />
+          <input type="hidden" name="window" value={free ? "free same-day" : "paid / next day"} />
           <button
             type="submit"
-            className="w-full rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[var(--bg)]"
+            disabled={status === "sending"}
+            className="w-full rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[var(--bg)] disabled:opacity-60"
           >
-            {free ? "Book free same-day draft" : "Request next slot / paid same-day"}
+            {status === "sending"
+              ? "Sending over HTTPS…"
+              : free
+                ? "Book free same-day draft"
+                : "Request next slot / paid same-day"}
           </button>
           <p className="text-xs text-[var(--fg-muted)]">
-            Opens your email client to {CONTACT_EMAIL}. Cal.com embed can replace this form later.
+            Sent over HTTPS to {CONTACT_EMAIL}. Your browser should show this page as secure.
           </p>
+          {status === "ok" && (
+            <p className="text-sm text-[var(--accent-2)]">Request received. We will reply by email.</p>
+          )}
+          {status === "invalid" && (
+            <p className="text-sm text-[var(--accent)]">Check name, email, and a short brief.</p>
+          )}
+          {status === "rate" && (
+            <p className="text-sm text-[var(--accent)]">Too many requests. Try again in an hour.</p>
+          )}
+          {status === "error" && (
+            <p className="text-sm text-[var(--accent)]">
+              Could not send it. Email {CONTACT_EMAIL} directly.
+            </p>
+          )}
         </form>
       </div>
     </section>

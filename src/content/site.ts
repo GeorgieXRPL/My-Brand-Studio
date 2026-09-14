@@ -41,6 +41,15 @@ export const portfolio: PortfolioItem[] = [
     tags: ["business", "creator"],
     embedSrc: "https://astroid.club",
   },
+  {
+    id: "card-seat",
+    name: "Card Seat",
+    blurb:
+      "Community game where Grok turns an X account's public posts into a Magic-like creature card. Prompt-first. No X API.",
+    url: "https://cardseat.com",
+    tags: ["business", "creator"],
+    embedSrc: "https://cardseat.com",
+  },
 ];
 
 export type Service = {

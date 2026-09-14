@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { IBM_Plex_Sans, Instrument_Serif } from "next/font/google";
 import { MockBanner } from "@/components/admin-mocks/MockBanner";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 const ibm = IBM_Plex_Sans({
   subsets: ["latin"],

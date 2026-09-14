@@ -1,9 +1,18 @@
+import { lookImagePath, lookStillForTemplate } from "@/content/look-stills";
 import type { TemplateLook } from "@/content/templates";
 
 export function TemplateRoom({ look }: { look: TemplateLook }) {
+  const still = lookStillForTemplate(look);
   return (
-    <div className={`template-room look-${look.look}`} aria-hidden>
-      <div className="template-room-chrome">
+    <div className={`template-room look-${look.look}`}>
+      <img
+        className="template-still"
+        src={lookImagePath(look.id)}
+        alt={still.alt}
+        width={1200}
+        height={750}
+      />
+      <div className="template-room-chrome" aria-hidden>
         <span className="template-room-brand">{look.brand}</span>
         <span className="template-room-nav">
           {look.nav[0]}

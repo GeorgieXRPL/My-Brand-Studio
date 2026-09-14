@@ -136,5 +136,7 @@ export const capturePlans = [
   },
 ] as const;
 
-export const CAPTURE_APP_URL = "https://app-bay-nu-40.vercel.app";
-export const CONTACT_EMAIL = "hello@mybrandstudio.app";
+export const CAPTURE_APP_URL = "https://app.mybrandstudio.club";
+export const SITE_URL = "https://mybrandstudio.club";
+export const CONTACT_EMAIL = "hello@mybrandstudio.club";
+export const BOOKING_FROM_EMAIL = "bookings@updates.mybrandstudio.club";

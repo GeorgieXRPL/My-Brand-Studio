@@ -38,6 +38,19 @@ Connect this folder as its own Vercel project (do not share the Capture app proj
 npx vercel
 ```
 
+## SEO
+
+Public routes are `/`, `/templates`, and `/do-i-need-a-website`. The site ships:
+
+- `robots.txt` (blocks `/admin`, `/api/`, `/work-embed`)
+- `sitemap.xml` (includes `/do-i-need-a-website`)
+- `llms.txt`
+- JSON-LD (`WebSite` + `ProfessionalService`)
+- Open Graph image at `/opengraph-image`
+- IndexNow key at `/6c8f2a91d4e047b3a1f9c0e8b7d6a5c4.txt`
+
+Submit `https://mybrandstudio.club/sitemap.xml` in Google Search Console and Bing Webmaster. Optional env vars: `GOOGLE_SITE_VERIFICATION`, `BING_SITE_VERIFICATION`.
+
 ## Branding
 
 | Surface | Name |

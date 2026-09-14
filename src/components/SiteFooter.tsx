@@ -15,6 +15,9 @@ export function SiteFooter() {
           <a href="/templates" className="block hover:text-[var(--fg)]">
             Templates
           </a>
+          <a href="/do-i-need-a-website" className="mt-2 block hover:text-[var(--fg)]">
+            Do I need a website?
+          </a>
           <a href={`mailto:${CONTACT_EMAIL}`} className="mt-2 block text-[var(--accent)] hover:underline">
             {CONTACT_EMAIL}
           </a>

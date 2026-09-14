@@ -16,9 +16,15 @@ export function Templates({
         <p className="text-sm font-medium uppercase tracking-[0.18em] text-[var(--accent)]">
           Templates
         </p>
-        <h2 className="font-display mt-3 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
-          Looks you can ship.
-        </h2>
+        {featured ? (
+          <h2 className="font-display mt-3 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
+            Looks you can ship.
+          </h2>
+        ) : (
+          <h1 className="font-display mt-3 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
+            Looks you can ship.
+          </h1>
+        )}
         <p className="mt-4 max-w-xl text-[var(--fg-muted)] leading-relaxed">
           {featured
             ? "Boxed rooms for new sites. High street, studio, and online looks for client pitches. Live builds are further down the page."

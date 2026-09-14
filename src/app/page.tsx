@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/SiteHeader";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
@@ -9,6 +10,11 @@ import { Work } from "@/components/Work";
 import { CaptureStrip } from "@/components/CaptureStrip";
 import { SiteFooter } from "@/components/SiteFooter";
 import { StickyBookCta } from "@/components/StickyBookCta";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: "/" },
+};
 
 export default function HomePage() {
   return (

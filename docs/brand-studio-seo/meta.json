@@ -1,0 +1,76 @@
+{
+  "url": "/do-i-need-a-website",
+  "canonical": "https://mybrandstudio.club/do-i-need-a-website",
+  "lang": "en-NZ",
+  "h1": "Do I need a website, an app, or a brand site that actually gets found?",
+  "title": "Do I need a website, an app, or a brand site?",
+  "metaDescription": "Instagram is not a website. Learn when you need a brand site, when an app can wait, and what good enough looks like in 2026. Book a same-day sketch in NZ.",
+  "ogTitle": "Do I need a website, an app, or a brand site?",
+  "ogDescription": "Most NZ businesses need a website before an app. Instagram helps people you know. A brand site is yours to own and find. Same-day sketch, My Brand Studio.",
+  "ogImageNote": "Prefer a representative look-card still (cafe or tradie), not the logo. See Google Images / og:image guidance: relevant, not generic, not extreme aspect ratio.",
+  "primaryKeywords": [
+    "do I need a website",
+    "do I need a website if I have Instagram",
+    "website vs app",
+    "website vs Linktree",
+    "is a Facebook page enough",
+    "what a good website looks like 2026",
+    "DIY website vs agency",
+    "how SEO works for a new website",
+    "New Zealand small business website",
+    ".co.nz vs .com",
+    "Google Business Profile New Zealand",
+    "same-day website sketch NZ"
+  ],
+  "secondaryKeywords": [
+    "brand site that gets found",
+    "enquiry form NZ",
+    "tradie website",
+    "cafe website New Zealand",
+    "done-for-you website NZ"
+  ],
+  "clipScripts": [
+    {
+      "id": "instagram",
+      "title": "Do I need a website if I already have Instagram?",
+      "durationSeconds": 35,
+      "spokenFirstLine": "Do you still need a website if Instagram is already busy?",
+      "script": "Do you still need a website if Instagram is already busy? Yes, if you want people who do not follow you to find you. Instagram is great for proof. It is a channel you do not own, and Google cannot treat a grid like a homepage. Put hours, services, and an enquiry form on a site that is yours. Keep posting. Point the bio at the site. My Brand Studio will sketch that page the same day if you book before ten."
+    },
+    {
+      "id": "website-vs-app",
+      "title": "Website vs app — which first?",
+      "durationSeconds": 32,
+      "spokenFirstLine": "Website or app first? The website. Almost always.",
+      "script": "Website or app first? The website. Almost always. An app only pays off when people come back: bookings, a login, points, a class hub. If you do not have that loop, an App Store page is expensive theatre. Start with a brand site people can find and trust. Add a login-ready shell later if you need it. Native apps can wait. Book a same-day sketch at mybrandstudio.club."
+    },
+    {
+      "id": "linktree-facebook",
+      "title": "Is a Linktree or Facebook page enough?",
+      "durationSeconds": 30,
+      "spokenFirstLine": "Is a Linktree or a Facebook page enough? They are extras, not a home.",
+      "script": "Is a Linktree or a Facebook page enough? They are extras, not a home. A Linktree is a list of buttons. A Facebook page lives on Facebook. Neither gives you crawlable service pages or a proper enquiry form. Keep them. Print a URL you own on the van and the cup. We will make that page, not another stack of links."
+    },
+    {
+      "id": "good-enough-2026",
+      "title": "What does a good enough website look like in 2026?",
+      "durationSeconds": 38,
+      "spokenFirstLine": "What does a good enough website look like in 2026?",
+      "script": "What does a good enough website look like in 2026? Fast on a phone. Honest about what you do. Easy to contact. Possible to edit on a Tuesday. One job on the home page, real photos, an enquiry form that actually arrives, a title that matches the search. A one-page site can be enough. A forty-page site with no way to say hello is not. If you want that, we sketch it the same day. We are not a free builder."
+    },
+    {
+      "id": "diy-agency-studio",
+      "title": "Should I DIY, hire an agency, or use Brand Studio?",
+      "durationSeconds": 40,
+      "spokenFirstLine": "Should you DIY, hire an agency, or use Brand Studio?",
+      "script": "Should you DIY, hire an agency, or use Brand Studio? DIY if you like evenings with a builder. An agency if you want a big custom production and those rates. Us if you want done-for-you from a look that already feels like a shop, a same-day sketch, and optional care for less than a typical retainer. You can run the admin yourself. We will not pretend this is a free drag-and-drop toy."
+    },
+    {
+      "id": "seo-new-site",
+      "title": "How does SEO actually work for a new site?",
+      "durationSeconds": 42,
+      "spokenFirstLine": "How does SEO actually work for a new site? Slowly, and without hacks.",
+      "script": "How does SEO actually work for a new site? Slowly, and without hacks. You publish a useful page for a real question, make it crawlable, keep your hours and suburbs consistent, and let genuine mentions accrue. Technical setup helps. Bought links and keyword stuffing do not. We will not guarantee page one. We will do foundations and light monthly work if you want the habit."
+    }
+  ]
+}
