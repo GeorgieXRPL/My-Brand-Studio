@@ -22,7 +22,7 @@ export function GalaxyIntro() {
   useEffect(() => {
     if (document.documentElement.dataset.galaxy !== "pending") return;
 
-    const timer = window.setTimeout(finishIntro, 2600);
+    const timer = window.setTimeout(finishIntro, 1200);
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") finishIntro();
     };

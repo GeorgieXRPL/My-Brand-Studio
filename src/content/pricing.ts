@@ -139,4 +139,9 @@ export const capturePlans = [
 export const CAPTURE_APP_URL = "https://app.mybrandstudio.club";
 export const SITE_URL = "https://mybrandstudio.club";
 export const CONTACT_EMAIL = "hello@mybrandstudio.club";
+export const CONTACT_PHONE = "+64 22 504 9628";
+export const CONTACT_PHONE_TEL = "tel:+64225049628";
+/** Same-day HTTPS booking form. Override with NEXT_PUBLIC_BOOKING_URL if needed. */
+export const BOOKING_URL =
+  process.env.NEXT_PUBLIC_BOOKING_URL?.trim() || "/#same-day";
 export const BOOKING_FROM_EMAIL = "bookings@updates.mybrandstudio.club";

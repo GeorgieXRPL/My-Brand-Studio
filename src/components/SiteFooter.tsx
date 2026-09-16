@@ -1,4 +1,8 @@
-import { CONTACT_EMAIL } from "@/content/pricing";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_TEL,
+} from "@/content/pricing";
 
 export function SiteFooter() {
   return (
@@ -15,8 +19,17 @@ export function SiteFooter() {
           <a href="/templates" className="block hover:text-[var(--fg)]">
             Templates
           </a>
+          <a href="/for-trades" className="mt-2 block hover:text-[var(--fg)]">
+            For trades
+          </a>
           <a href="/do-i-need-a-website" className="mt-2 block hover:text-[var(--fg)]">
             Do I need a website?
+          </a>
+          <a
+            href={CONTACT_PHONE_TEL}
+            className="mt-2 block text-[var(--accent)] hover:underline"
+          >
+            Call {CONTACT_PHONE}
           </a>
           <a href={`mailto:${CONTACT_EMAIL}`} className="mt-2 block text-[var(--accent)] hover:underline">
             {CONTACT_EMAIL}

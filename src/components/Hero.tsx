@@ -3,6 +3,11 @@
 import { GalaxyIntro } from "@/components/GalaxyIntro";
 import { useAudience } from "@/lib/audience";
 import { copy } from "@/content/site";
+import {
+  BOOKING_URL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_TEL,
+} from "@/content/pricing";
 
 export function Hero() {
   const { audience } = useAudience();
@@ -38,10 +43,16 @@ export function Hero() {
         </p>
         <div className="hero-actions mt-8 flex flex-wrap items-center gap-3">
           <a
-            href="/#same-day"
+            href={BOOKING_URL}
             className="cta-pulse rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-[var(--bg)]"
           >
             Free same-day draft before 10am
+          </a>
+          <a
+            href={CONTACT_PHONE_TEL}
+            className="rounded-full border border-[var(--line)] px-6 py-3 text-sm font-medium text-[var(--fg)] hover:border-[var(--accent)] transition-colors"
+          >
+            Call {CONTACT_PHONE}
           </a>
           <a
             href={audience === "business" ? "/#admin" : "/#work"}
